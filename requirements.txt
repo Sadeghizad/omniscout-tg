@@ -1,0 +1,37 @@
+# ==============================================================================
+# OmniScout-TG: Core Production Dependencies
+# Target Runtime: Python 3.10+ (Compatible with Windows 11 / Python 3.11.9)
+# ==============================================================================
+
+# Core Data Validation & Serialization (Pydantic v2)
+pydantic>=2.6.0,<3.0.0
+pydantic-settings>=2.2.0,<3.0.0
+
+# HTTP Clients
+requests>=2.31.0,<3.0.0
+httpx>=0.27.0,<1.0.0
+
+# Telegram Native MTProto & Web Scraping ($0 Cost Extraction)
+telethon>=1.36.0,<2.0.0
+beautifulsoup4>=4.12.0,<5.0.0
+
+# Network Resilience & Retry Policies
+tenacity>=8.2.0,<10.0.0
+
+# Environment Configuration
+python-dotenv>=1.0.0,<2.0.0
+
+# Excel Workbook Engine (PRD Section 5: 8-sheet corporate media plans with RTL)
+openpyxl>=3.1.2,<4.0.0
+
+# Persian & RTL Text Shaping Utilities
+arabic-reshaper>=3.0.0
+python-bidi>=0.6.0
+
+# ------------------------------------------------------------------------------
+# Interfaces: local web GUI (FastAPI) and MCP server for agent platforms.
+# Remove this block if you only ever use the CLI.
+# ------------------------------------------------------------------------------
+fastapi>=0.110.0,<1.0.0
+uvicorn>=0.27.0,<1.0.0
+mcp>=1.2.0,<2.0.0

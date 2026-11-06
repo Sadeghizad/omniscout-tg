@@ -1,0 +1,40 @@
+{
+  "name": "omniscout-tg",
+  "version": "0.2.0",
+  "description": "OmniScout-TG: Media-Planning Decision Intelligence & Attribution Engine for Telegram",
+  "type": "module",
+  "scripts": {
+    "test": "bun run test:offline",
+    "test:offline": "pytest -v -m \"not live\" tests",
+    "test:unit": "pytest -v -m \"not live\" tests",
+    "test:live": "python tests/verify_bai_live.py",
+    "test:all": "pytest -v tests",
+    "test:cov": "pytest -v --cov=src --cov-report=term-missing tests",
+    "verify:seed": "python scripts/verify_seed_expansion.py",
+    "auth:telegram": "python scripts/telegram_auth_wizard.py",
+    "cli": "python -m src.cli",
+    "cli:preset": "python -m src.cli --preset",
+    "gui": "python -m src.web.app",
+    "mcp": "python -m src.mcp_server",
+    "run:plusdesign": "python scripts/run_plusdesign_campaign.py",
+    "lint": "ruff check .",
+    "lint:fix": "ruff check --fix .",
+    "format": "ruff format .",
+    "check": "bun run lint && bun run test:offline",
+    "install:py": "pip install -r requirements.txt",
+    "install:py:dev": "pip install -r requirements-dev.txt",
+    "verify": "python tests/verify_bai_live.py"
+  },
+  "keywords": [
+    "telegram",
+    "media-planning",
+    "decision-intelligence",
+    "jev",
+    "deepseek",
+    "b.ai",
+    "attribution"
+  ],
+  "author": "OmniScout-TG Team",
+  "license": "UNLICENSED",
+  "private": true
+}
